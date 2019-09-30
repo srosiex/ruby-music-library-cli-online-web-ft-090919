@@ -3,7 +3,6 @@ class Artist
   @@all = []
   def initialize(name)
     @name = name
-    @@all << self
     @songs = []
   end
 
@@ -18,13 +17,15 @@ class Artist
     @@all << self
   end
 
-  def self.create(name)
-    Artist.new(name)
+  def self.create(artist)
+    artist = self.new(artist)
+    artist.save
+    artist
   end
 
   def add_song(song)
-    self.songs << song
-    song.artist = self
+    if song.artist == nil
+      song.artist = self  
   end
 
 
