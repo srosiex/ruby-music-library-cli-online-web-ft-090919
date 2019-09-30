@@ -33,5 +33,5 @@ attr_accessor :name, :artist, :genre
     @genre = genre
     genre.songs << self  unless genre.songs.include?(self)
   end
-end
+
 end
