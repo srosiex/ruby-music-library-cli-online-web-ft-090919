@@ -25,6 +25,7 @@ attr_reader :songs
    genre.save
    genre
  end
+ 
  def songs
    @songs
  end
