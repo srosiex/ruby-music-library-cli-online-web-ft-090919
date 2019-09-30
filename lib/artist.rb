@@ -17,6 +17,7 @@ class Artist
   def save
     @@all << self
   end
+  
   def self.create(name)
     Artist.new(name)
   end
@@ -28,7 +29,7 @@ class Artist
 
 
   def songs
-    Song.all.select {|song| song.artist == self}
+    @songs
 end
 
 
