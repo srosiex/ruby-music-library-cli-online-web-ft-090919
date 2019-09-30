@@ -19,8 +19,8 @@ attr_accessor :name, :artist, :genre
   def save
     @@all << self
   end
-  def self.create(song, artist=nil)
-    song = Song.new(song, artist)
+  def self.create(song, artist=nil, genre=nil)
+    song = Song.new(song, artist, genre)
     song.save
     song
   end
