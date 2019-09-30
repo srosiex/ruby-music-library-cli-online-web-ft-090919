@@ -20,6 +20,8 @@ attr_accessor :name
    genre.save
    genre
  end
-
+ def songs
+   Song.all.select {|song| song.genre == self}
+ end
 
 end
