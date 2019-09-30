@@ -27,7 +27,7 @@ class Artist
     if song.artist == nil
       song.artist = self  
   end
-
+end
 
   def songs
     @songs
