@@ -43,5 +43,9 @@ class Genre
     @new_array
   end
 
+  def add_song(song)
+      song.artist = self unless song.artist
+      songs << song unless songs.include?(song)
+    end
 
 end
