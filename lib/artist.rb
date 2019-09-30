@@ -35,8 +35,8 @@ end
   end
 
   def genres
-    Genre.all.select {|genre| genre.artist == self}
+    songs.collect do |song|
   end
-
+end
 
 end
